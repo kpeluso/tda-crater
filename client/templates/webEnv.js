@@ -31,6 +31,9 @@ function aceContent(option) {
 			e.stop();
 			if (option) {
 				Session.set("htmlContent", editor1.getValue());
+
+				console.log(Session.get("htmlContent"));
+
 			} else if (!option) {
 				editor1.insert(Session.get("htmlContent"));
 			}
@@ -45,6 +48,9 @@ function aceContent(option) {
 			e.stop();
 			if (option) {
 				Session.set("cssContent", editor2.getValue());
+
+				console.log(Session.get("cssContent"));
+
 			} else if (!option) {
 				editor2.insert(Session.get("cssContent"));
 			}
@@ -59,6 +65,9 @@ function aceContent(option) {
 			e.stop();
 			if (option) {
 				Session.set("jsContent", editor3.getValue());
+
+				console.log(Session.get("jsContent"));
+
 			} else if (!option) {
 				editor3.insert(Session.get("jsContent"));
 			}

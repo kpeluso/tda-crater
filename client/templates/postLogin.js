@@ -16,7 +16,7 @@ function currEnv(s) {
 }
 
 function nav2filesList(inp) {
-	// input 'inp' is either 'changeFile' or 'saveFile' 
+	// input 'inp' is either 'changeFile' or 'saveFile'
 	Session.set('amendPage', [true, currEnv(Session.get('nextLang')), inp]);
 	// ^[(whether or not your on an amended page), (the previous page), (the amended page you're entering)]
 	FlowRouter.go('/filesList'); // take you to filesList 'inp'

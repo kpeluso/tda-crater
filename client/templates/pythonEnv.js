@@ -1,9 +1,9 @@
 // ace editor from atmosphere.js > arch:ace-editor
 // http://www.skulpt.org/#
 
-import skulpt from 'skulpt'
+import skulpt from 'skulpt';
 
-var totalPanels = 3
+var totalPanels = 3;
 
 Template.pythonEnv.helpers({
 	'file': function() {
@@ -13,9 +13,9 @@ Template.pythonEnv.helpers({
 
 // output functions are configurable.  This one just appends some text
 // to a pre element.
-function outf(text) { 
-	var mypre = document.getElementById("py_outputPanel"); 
-	mypre.innerHTML = mypre.innerHTML + text; 
+function outf(text) {
+	var mypre = document.getElementById("py_outputPanel");
+	mypre.innerHTML = mypre.innerHTML + text;
 }
 
 function builtinRead(x) {
