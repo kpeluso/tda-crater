@@ -1,0 +1,51 @@
+<template name="settings">
+	{{#with currUser}} <!-- 'file' also contains user info -->
+		<div id="settings_pageContainer">
+			<div id="settings_formContainer">
+				<div class="settings_formBox">
+					<span class="headers">Update Profile</span>
+					<!-- You can't change your username, we generate unique ones and give it to the kids, we don't care. -->
+					<form id=settings_profileForm>
+						<div id="settings_formTable">
+							<div class="settings_row"><p class="settings_rowP">First name:</p><input name="s_firstName" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Last name:</p><input name="s_lastName" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Email:</p><input name="s_email" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Phone:</p><input name="s_phone" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Street Address:</p><input name="s_street" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Town:</p><input name="s_town" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">State:</p><input name="s_state" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Emergency Contact name:</p><input name="s_eName" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Emergency Contact email:</p><input name="s_eEmail" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><p class="settings_rowP">Preferences/Accomodations:</p><input name="s_pref" type="text" class="settings_rowIn" /></div>
+							<div class="settings_row"><button class="settings_button login" id=changeProf_button type=submit value="updateProf">Update</button></div>
+							<div class="settings_row"></div>
+						</div>
+					</form>
+				</div>
+				<div class="settings_formBox">
+					<span class="headers">Change Password</span>
+					<form id=settings_passForm>
+						<div class="settings_formTable">
+							<div class="settings_row"><p class="settings_rowP">Current password:</p><input name="s_currPass" type="password" class="settings_rowIn" required /></div>
+							<div class="settings_row"><p class="settings_rowP">New password:</p><input name="s_newPass" type="password" class="settings_rowIn" required /></div>
+							<p class="small">*Only passwords with 7 to 15 characters, a number, and a special character are accepted.</p>
+							<div class="settings_row"><p class="settings_rowP">Re-type new password:</p><input name="s_newPass_confirm" type="password" class="settings_rowIn" required /></div>
+							<div class="settings_row"><button class="settings_button login" id=changePass_button type=submit value="changePass">Change</button></div>
+							<div class="settings_row"></div>
+						</div>
+					</form>
+				</div>
+				<div class="settings_formBox">
+					<span class="headers">Contact TechDay</span>
+					<form id=settings_contactForm>
+						<div class="settings_formTable">
+							<div class="settings_row"><button class="settings_button login" id=contact_button type=submit value="changePass">Contact</button></div>
+							<div class="settings_row"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	{{/with}}
+</template>
+

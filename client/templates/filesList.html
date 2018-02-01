@@ -1,0 +1,23 @@
+<template name="filesList">
+	<div id="fL_pageContainer">
+		<div id="fL_filesContainer">
+			{{#with currFile}}
+				<div class="fL_fileBox" style="background-color: yellow; {{changeDisp}}">
+					<span class="fL_headers">Current File: {{fileName}}</span>
+					<span class="fL_headers">Last Modified: {{readableModifiedDate}}</span>
+				</div>
+			{{/with}}
+			{{#each not_currFile}} <!-- filter out user profile document and current file -->
+				<div class="fL_fileBox">
+					<div class="fL_headerArea">
+						<span class="fL_headers">File Name: {{fileName}}</span>
+						<span class="fL_headers">Last Modified: {{readableModifiedDate}}</span>
+					</div>
+					<button class="fL_deleteButton fl_button" style="{{nonPublic}}">Delete</button>
+					<button class="fL_changeButton fl_button" style="{{changeDisp}}">Open</button>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</template>
+

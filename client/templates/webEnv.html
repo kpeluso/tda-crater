@@ -1,0 +1,23 @@
+<template name="webEnv">
+	{{#with file}}
+		<div id="web_container">
+			<div id="web_header">
+				<div id="web_buttonContainer">
+					<p id="web_toggle_note">Click to toggle: &nbsp; </p>
+					<div class="web_toggleButton web_active" id="web_html">HTML</div>
+					<div class="web_toggleButton" id="web_css">CSS</div>
+					<div class="web_toggleButton" id="web_js">JavaScript</div>
+					<div class="web_toggleButton web_active" id="web_output">Output</div>
+				</div>
+			</div>
+				
+			<div id="web_bodyContainer">
+				<pre id="web_htmlPanel" class="web_input web_panel"></pre>
+				<pre id="web_cssPanel" class="web_input web_panel web_hidden"></pre>
+				<pre id="web_jsPanel" class="web_input web_panel web_hidden"></pre>
+				<iframe id="web_outputPanel" class="web_panel"></iframe>
+			</div>
+		</div>
+	{{/with}}
+</template>
+

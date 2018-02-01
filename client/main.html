@@ -1,0 +1,12 @@
+<head>
+  <title>tda-crater</title>
+</head>
+<body>
+    {{#if currentUser}}
+        {{> postLogin}}
+    {{else}}
+        {{> preLogin}}
+    {{/if}}
+    {{> sAlert}}
+</body>
+

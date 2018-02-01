@@ -1,0 +1,21 @@
+<template name="pythonEnv">
+	{{#with file}}
+		<div id="py_container">
+			<div id="py_header">
+				<div id="py_buttonContainer">
+					<p id="py_toggle_note">Click to toggle: &nbsp; </p>
+					<div class="py_toggleButton py_active" id="py_in">Python</div>
+					<div class="py_toggleButton py_active" id="py_output">Output</div>
+					<div class="py_toggleButton" id="py_turtle">Turtle</div>
+				</div>
+				<button class="login" id="py_run">Run!</button>
+			</div>
+			<div id="py_bodyContainer">
+				<pre id="py_inPanel" class="py_input py_panel"></pre>
+				<pre id="py_outputPanel" class="py_panel"></pre>
+				<div id="py_turtlePanel" class="py_panel py_hidden"></div>
+			</div>
+		</div>
+	{{/with}}
+</template>
+

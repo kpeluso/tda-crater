@@ -1,0 +1,45 @@
+<template name="preLogin">
+	<!-- add login -->
+	<div id="prelogin-container">
+		<!-- <div id="behind_login"></div> -->
+		<div id="login">
+			<div id="banner">
+				<h2 id="pre_bannerText">Wantagh TechDay WebApp</h2>
+			</div>
+			<div class="pre_forms">
+				<form id="login-form" method="post">
+					<p>Login</p>
+					<div class="pre_inputArea">
+						<span class="pre_text">Username:&nbsp;</span>
+						<input class="pre_in" type="text" name="username1" placeholder="jsmith6" required />
+					</div>
+					<div class="pre_inputArea">
+						<span class="pre_text">Password:&nbsp;</span>
+						<input class="pre_in" type="password" name="password1" required />
+					</div>
+					<button class="preLogin_button login" id=login_button type=submit value="login">Login</button>
+				</form>
+			</div>
+			<div class="pre_forms">
+				<form id="signup-form" method="post">
+					<p>Signup</p>
+					<div class="pre_inputArea">
+						<span class="pre_text">Username:&nbsp;</span>
+						<input class="pre_in" type="text" name="username2" placeholder="jsmith6" required />
+					</div>
+					<div class="pre_inputArea">
+						<span class="pre_text">Password:&nbsp;</span>
+						<input class="pre_in" type="password" name="password2" required />
+					</div>
+					<p class="small">*Only passwords with 7 to 15 characters, a number, and a special character are accepted.</p>
+					<div class="pre_inputArea">
+						<span class="pre_text">Re-type password:&nbsp;</span>
+						<input class="pre_in" type="password" name="confirm_password2" required />
+					</div>
+					<button class="preLogin_button login" id=signup_button type=submit value="signup">Signup</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</template>
+
